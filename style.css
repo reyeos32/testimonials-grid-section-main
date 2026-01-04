@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+
+
+.box {
+    padding: 2.1875rem 1.875rem 1.5625rem 1.875rem;
+    border-radius: 0.9375rem;
+    box-shadow: -2.3125rem 3.625rem 6.125rem -4.8125rem black;
+}
+
+
+
+
+.img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: scale(1.2);
+}
+
+
+.box-info {
+    display: flex;
+    align-items: center;
+}
+
+.box-info p {
+    margin-left: 1.25rem;
+}
+
+.box h1 {
+    font-size: 1.5625rem;
+    font-weight: 500;
+    margin: 1.25rem 0;
+}
+
+.box p,
+.box h1 {
+    color: white;
+}
+
+.box p {
+    font-size: 1.0625rem;
+}
+
+.jean p,
+.kira p,
+.jean h1,
+.kira h1 {
+    color: black;
+}
+
+.name p:nth-child(2) {
+    font-size: 0.875rem;
+    margin-top: 0.0625rem;
+}
+.name p:nth-child(1) {
+    font-size: 0.875rem;
+    letter-spacing: 0.0625rem;
+}
+
+.subject {
+    line-height: 1.5625rem;
+}
+
+
+
+
+
+
+
+
+.container section {
+    min-height: 100vh;
+    padding: 1.875rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "daniel daniel jon kira"
+    "jean pat pat kira";
+    gap: 2.5rem;
+}
+
+
+
+
+
+
+
+
+.daniel {
+    grid-area: daniel;
+    background-color: hsl(263, 55%, 52%);
+    position: relative;
+}
+.daniel::before {
+    content: '';
+    height: 6.875rem;
+    width: 6.875rem;
+    position: absolute;
+    right: 0;
+    background-image: url(./bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    top: 0;
+    margin-right: 4.6875rem;
+}
+
+.daniel-subject {
+    color: hsl(0, 0%, 81%) !important;
+}
+
+
+
+.daniel-info img {
+    border: 0.125rem solid hsl(264, 82%, 80%) !important;
+    object-position: 0.0625rem 0;
+}
+
+
+
+
+.jon-name p:nth-child(2),
+.daniel-name p:nth-child(2) {
+    color: hsl(0, 0%, 81%);
+}
+
+
+
+
+
+
+.jon {
+    grid-area: jon;
+    background-color: hsl(224, 10%, 45%);
+}
+
+.jon-subject {
+    color: hsl(0, 0%, 81%) !important;
+}
+
+.jon-info img {
+    object-position: 0 0.0625rem;
+    transform: scale(1.2);
+    border: 0.0625rem solid hsl(0, 0%, 81%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.jean {
+    grid-area: jean;
+}
+
+.jean-info img {
+    object-position: 0 0.0625rem;
+    transform: scale(1.3);
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+.pat {
+    grid-area: pat;
+    background-color: hsl(219, 29%, 14%);
+}
+
+.pat-info img {
+    object-position: 0 0.0625rem;
+    border: 0.125rem solid hsl(263, 55%, 52%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.kira {
+    grid-area: kira;
+}
+
+.kira-info img {
+    border-radius: 0;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1172px) {
+    .container section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "daniel daniel jon"
+        "jean pat pat"
+        "kira kira kira";
+    }
+
+    .daniel::before {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .container section {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+        "daniel"
+        "jon"
+        "jean"
+        "pat"
+        "kira";
+    }
+
+    .title {
+        font-size: 1.25rem !important;
+    }
+
+    .subject {
+        font-size: 0.9375rem !important;
+    }
+}
