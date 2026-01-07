@@ -79,11 +79,15 @@ body {
 
 
 
-
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
 .container section {
-    min-height: 100vh;
-    padding: 1.875rem;
+    padding:  1.875rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto;
@@ -91,6 +95,7 @@ body {
     "daniel daniel jon kira"
     "jean pat pat kira";
     gap: 2.5rem;
+    max-width: 87.5rem;
 }
 
 
